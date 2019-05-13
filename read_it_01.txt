@@ -1,0 +1,41 @@
+Upgrade ManageEngine ADManager, ADAudit, Exchange Reporter, Self Service
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+
+PDL VAM upgrade on the LIVE to support Release 8 features
+Change ID : 5161    |   Stage : Approval   |   Status : Business Approval Required   |    Requested by : Jayaprasad Kothandaraman 
+VAM upgrade on the LIVE is required for bringing in all the Release 8 features on LIVE as listed below.
+Clickable EPG banner.
+Sort Ordering.
+Asset Packshot/PDL Highlighting
+ISU on Box Office.
+
+VAM upgrade and XTIVAM config update required for the Humax HD PVR R8.
+Upgrading the following VAM components from 2.16.1-1 to 2.16.1-2:
+
+
+
+Vamctrl
+Vamingest
+Vamrules
+Vamwebui
+DB_VAM – minor patch to the schema for Billboard image support
+Also includes a minor configuration update for Billboard in the XTIVAM in the following files:
+
+
+VOD002Types.xsd to add:
+
+
+<enumeration value="Billboard"/>
+
+
+VOD001_if.xml to add:
+
+
+<element name="Billboard" value="6"/>
+
+
+
+
+
+Please note: This versions are already deployed on the Test system and we have tested all the features working. Also there is no regression on the existing functionality.
